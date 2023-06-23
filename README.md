@@ -14,5 +14,7 @@ is some skill that is available please raise a PR so that, the link to the skill
 2. Setup aws cli and configure, node js is also required
 3. Install ask cli and configure
 4. `ask deploy` will create lambda functions and deploy
-5. Generate a google cloud API with `YouTube Data API v3` restriction, and add it to the lambda function created 
-above as `YOUTUBE_API_KEY`
+5. Create a project on [https://console.cloud.google.com/apis/dashboard](https://console.cloud.google.com/projectcreate
+6. Enable Youtube Data API v3 on https://console.cloud.google.com/apis/dashboard?project=yourprojectname
+7. Create an API key (CREATE CREDENTIALS, pick API) on https://console.cloud.google.com/apis/credentials?project=yourprojectname
+8. Copy paste the just generated API Key, and add a new Environment Variable named `YOUTUBE_API_KEY` on the Lambda function (click the function https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/?tab=configure , it's under tab configure)
